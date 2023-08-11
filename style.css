@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400&display=swap");
+
+/*  Pulsa atz+z pára ver el texto de comentarios de mejor manera. */
+* {
+  box-sizing: border-box;
+}
+/* estilos basicos del html */
+body {
+  background: #efefbb;
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+img{
+  width: 120px;
+  height: 120px;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Esta id trabaja en función de generar una grid la cual va a repetir espacios para agregar las cards de lados dependiendo a la disponibilidad de espacio de esta pantalla y tambien centra el contenido, grid-template-columns se repite automaticamente y al darle un minmax pasa a ser responsive */
+
+#poke-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Estilos de la imagen de la card del pokemon */
+.pokemon-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* estilos de la info de la card del pokemon */
+.pokemon-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: #fff;
+}
+
+/* estilos del id del pokemon */
+.pokemon-id {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 2px solid;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: -10px;
+}
+
+/* estilos del nombre del pokemon */
+.pokemon-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+/* estilos el tipo de pokemon */
+.pokemon-type {
+  font-size: 14px;
+  color: #000;
+}
+
+.pokemon-type span {
+  font-weight: bold;
+}
