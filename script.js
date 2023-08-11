@@ -1,4 +1,4 @@
-/*Obtener el contenedor de los Pokémon desde el HTML*/
+/*Esta constante es la enncargada de obtener el contenedor de los Pokémon desde el HTML*/
 const pokeContainer = document.getElementById('poke-container');
 
 /*Número total de Pokémon a obtener (este dato se pasa en la linea 31 para decirle a la API de pokemon que traiga 150 datos de pokemones)*/
